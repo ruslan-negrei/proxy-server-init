@@ -22,7 +22,10 @@ sudo make install
 echo "Installing NVM..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-source ~/.bashrc
+# Load NVM
+echo "Loading NVM..."
+export NVM_DIR="$HOME/.nvm"
+source $NVM_DIR/nvm.sh
 
 # Install Node.js
 echo "Installing Node.js..."
@@ -64,12 +67,6 @@ WaylandEnable=false
 
 systemctl disable ufw
 systemctl disable firewalld
-
-# Cloning repository
-echo "Cloning repository..."
-sudo -u admin ssh-keyscan -H github.com >>/home/admin/.ssh/known_hosts
-sudo -u admin git clone git@github.com:ruslan-negrei/proxy.git /home/admin/proxy
-cd /home/admin/proxy/proxy-server
 
 # Copying NetworkManager configuration
 echo "Copying NetworkManager configuration..."
