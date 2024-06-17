@@ -70,11 +70,11 @@ systemctl disable firewalld
 
 # Copying NetworkManager configuration
 echo "Copying NetworkManager configuration..."
-cp ~/init//NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
+cp /home/user/init//NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
 # Copying modem reconnection script
 echo "Copying modem reconnection script..."
-cp ~/init/modem_reconnect.sh /etc/NetworkManager/dispatcher.d/99-modem-reconnect
+cp /home/user/init/modem_reconnect.sh /etc/NetworkManager/dispatcher.d/99-modem-reconnect
 chmod +x /etc/NetworkManager/dispatcher.d/99-modem-reconnect
 
 # Setting IPTables rules
