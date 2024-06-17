@@ -95,7 +95,7 @@ netfilter-persistent save
 
 # Getting current interface connected to the internet
 echo "Getting current interface connected to the internet..."
-INTERFACE=$(ip route | awk '/^default/ {print $5}')
+INTERFACE=$(ip route | awk '/^default/ {print $5; exit }')
 
 # Setting ethernet interface not being managed by NetworkManager
 echo "Setting ethernet interface not being managed by NetworkManager..."
