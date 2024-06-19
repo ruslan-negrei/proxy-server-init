@@ -82,7 +82,8 @@ PORT_END=$PORT_END
 ANYDESK_ID=$ANYDESK_ID
 ANYDESK_PASSWORD=$ANYDESK_PASSWORD
 INTERNAL_IP=$INTERNAL_IP
-PROXY_API_KEY=$PROXY_API_KEY" >/home/admin/proxy/.env
+PROXY_API_KEY=$PROXY_API_KEY
+" >/home/admin/proxy/.env
 
 # Setting up proxy server
 echo "Setting up proxy server..."
