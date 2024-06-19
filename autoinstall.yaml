@@ -1,0 +1,13 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+      username: user
+      password: '$6$FXJ4GyZDq0E9cfRH$aryeR0rztjoMxqUUypBg17rr5dV41EPylLlQ8DMitviRZBSuCOIBLJUf5MPEHFMzTG2MTLStWhmphFx7DmXhS.'
+      hostname: ubuntu
+  ssh:
+    install-server: true
+    authorized-keys: ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDiSikNLwVRZ/o+6tUWhAOXH7ZPk0da6CPSTJCYCx8OePC22pQwwRwe75c5PIxQ5NIX1hMgd3h8B9A7V6vQ3l9VkCVe7NeUGDBhTBbGT14j7FYH7vyhDoSm9HhcW7QR9wIykebspgta15fZMZGtFqxL9TvpwSE5VCOHFquB2BiyNyhacn3tRGObdtRBk7iM9IXAUG1m5AGqAQdqAj5cG7dm1AcpFS4/3Zb4WIDL/FLT1vacDo+TzvsDgvDXZlxDUtM5NKxVvEVzaTStJZILNk1r5N4oSJwf7iFuxNqGpNYv2PjaX7+8ODBuSi+TouPg4Lrsp4khHUBK/8SwzGl7DcxVdZVzjNyLesAvdpdm3UkkPwNWNvlZx3ig6eKKThKsYbIufD8famx0HchQH1jbAdh/0DTa6UwHom+tHKUSxDMwwiiRJWnohJZ653enDRXBTuXFf9mIKNYnxzGItYYrGllGEguzmLzgqrAMw5gbO0ZhJNbWJV/dPo9/F/fK6p3GXN5keUrU4ukS6HCvuvMBYxfd1KQLV6QCA0jxV2rcFCPYGPlErzxFGMFtVy/9gN8xNz1CXqIr/UGPPTjxcLl7sPJIjLhu9V6NM1TuS6nmzNQZmVciLuNW8zyGrZeDOnoTAVVBYOOdFVWLm9/82UL65FxBkORT/hfbooRDbAu+ncL7Gw== ruslegg@github.com"]
+    allow-pw: false
+  packages:
+    - git
