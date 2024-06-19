@@ -95,13 +95,9 @@ echo "Downloading latest release..."
 curl -o /home/admin/release.zip $PROXY_SERVER_URL/api/proxy/latest?apiKey=$PROXY_API_KEY
 
 echo "Unzipping release..."
-unzip -o /home/admin/release.zip -d /home/admin/
-
-echo "Copying files..."
-cp /home/admin/release/* /home/admin/proxy
-
-echo "Cleaning up..."
-rm -rf /home/admin/release /home/admin/release.zip
+mkdir -p /home/admin/proxy
+chown -R admin:admin /home/admin/proxy
+unzip -o /home/admin/release.zip -d /home/admin/proxy
 
 # Installing dependencies
 cd /home/admin/proxy
